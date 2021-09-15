@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="3946" started-at="2021-09-15T01:44:37 EDT" finished-at="2021-09-15T01:44:41 EDT">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.http.method.cucumber.Runner@3b084709]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Test" duration-ms="3946" started-at="2021-09-15T01:44:37 EDT" finished-at="2021-09-15T01:44:41 EDT">
+      <class name="com.http.method.cucumber.Runner">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.http.method.cucumber.Runner@3b084709]" name="setUpClass" is-config="true" duration-ms="375" started-at="2021-09-15T01:44:37 EDT" finished-at="2021-09-15T01:44:37 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.http.method.cucumber.Runner@3b084709]" name="runScenario" duration-ms="1847" started-at="2021-09-15T01:44:37 EDT" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-09-15T01:44:39 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["As an API user, I am trying to practice HTTP Get Method"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Optional[API Get Method Testing]"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.http.method.cucumber.Runner@3b084709]" name="tearDownClass" is-config="true" duration-ms="1695" started-at="2021-09-15T01:44:39 EDT" finished-at="2021-09-15T01:44:41 EDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.http.method.cucumber.Runner -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

@@ -1,0 +1,84 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2021-09-15T05:44:37.617Z",
+        "line": 5,
+        "name": "As an API user, I am trying to practice HTTP Get Method",
+        "description": "",
+        "id": "api-get-method-testing;as-an-api-user--i-am-trying-to-practice-http-get-method",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1745000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Pass the URL",
+            "match": {
+              "location": "com.http.method.cucumber.StepDefinition.pass_the_url()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "validate status code",
+            "match": {
+              "location": "com.http.method.cucumber.StepDefinition.validate_status_code()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "validate data format is JSON",
+            "match": {
+              "location": "com.http.method.cucumber.StepDefinition.validate_data_format_is_json()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "validate response time",
+            "match": {
+              "location": "com.http.method.cucumber.StepDefinition.validate_response_time()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "validate response should not be null",
+            "match": {
+              "location": "com.http.method.cucumber.StepDefinition.validate_response_should_not_be_null()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "API Get Method Testing",
+    "description": "",
+    "id": "api-get-method-testing",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/API%20Get%20Method.feature",
+    "tags": []
+  }
+]

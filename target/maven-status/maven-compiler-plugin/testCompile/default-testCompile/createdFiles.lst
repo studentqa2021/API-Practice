@@ -1,0 +1,4 @@
+com\http\method\cucumber\Runner.class
+com\http\method\cucumber\StepDefinition.class
+com\http\method\testng\TestingGetMethod.class
+com\http\method\java\TestingGetMethod.class
