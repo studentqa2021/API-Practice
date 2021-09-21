@@ -2,17 +2,32 @@ package com.http.method.java;
 
 import org.testng.Assert;
 
+import com.google.gson.JsonObject;
+
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 
-public class TestingGetMethod {
+public class PostTesting {
 	
-	public void getTest() {
+public void getTest() {
+	
+	// 1st ==> add test data = JsonObject class and addProperty
+	JsonObject obj = new JsonObject();
+	obj.addProperty("title", "Automation");
+	obj.addProperty("author", "Student");
+	
+	// 2nd ==> RequestSpecification and add data inside body
+	RequestSpecification rsf = RestAssured.given();
+	rsf.header("Content-type", "application/json");
+	rsf.body(obj); //passing test data inside the message body
+	
+	// 3rd ==> Pass the URL
+	Response response = rsf.post("http://localhost:3000/posts");
 		
-		Response response = RestAssured.get("http://localhost:3000/posts");
-		
-		System.out.println("Status code ="+response.getStatusCode());//200
-		Assert.assertEquals(response.getStatusCode(), 200);
+	//4th ==> Validate
+		System.out.println("Status code ="+response.getStatusCode());//201
+		Assert.assertEquals(response.getStatusCode(), 201);
 		
 		//System.out.println(response.getContentType());//json
 		System.out.println("Data format ="+response.getContentType());
@@ -30,7 +45,10 @@ public class TestingGetMethod {
 	}
 	
 	public static void main(String[] args) {
-		new TestingGetMethod().getTest();
+		new PostTesting().getTest();
 	}
 
 }
+
+
+

@@ -5,11 +5,11 @@ import org.testng.Assert;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
-public class TestingGetMethod {
+public class DeleteMethod {
 	
-	public void getTest() {
+public void getDeleteTest() {
 		
-		Response response = RestAssured.get("http://localhost:3000/posts");
+		Response response = RestAssured.delete("http://localhost:3000/posts/22");
 		
 		System.out.println("Status code ="+response.getStatusCode());//200
 		Assert.assertEquals(response.getStatusCode(), 200);
@@ -24,13 +24,13 @@ public class TestingGetMethod {
 		Assert.assertTrue(response.getTime()<2000);
 		
 		//System.out.println(response.asString());//whole data
-		response.prettyPrint();
+		//response.prettyPrint();
 		System.out.println("Is response null or not =" +(response.toString()!= null));
 		Assert.assertTrue(response.toString()!= null);
 	}
 	
 	public static void main(String[] args) {
-		new TestingGetMethod().getTest();
+		new DeleteMethod().getDeleteTest();
 	}
 
 }
