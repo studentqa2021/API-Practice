@@ -5,6 +5,7 @@ import org.testng.Assert;
 import com.google.gson.JsonObject;
 
 import io.restassured.RestAssured;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
@@ -39,9 +40,16 @@ public void getTest() {
 		
 		//System.out.println(response.asString());//whole data
 		//Data Validation 
-		response.prettyPrint();
+		//response.prettyPrint();
 		System.out.println("Is response null or not =" +(response.toString()!= null));
 		Assert.assertTrue(response.toString()!= null);
+		//specific attribute value or how to parse json data
+		
+		JsonPath jp = response.jsonPath(); //to go to specific attribute
+		Assert.assertTrue(jp.get("title") != null);
+		
+		Assert.assertEquals(jp.get("title").toString(), "Automation");
+		Assert.assertEquals(jp.get("author").toString(), "Student");
 	}
 	
 	public static void main(String[] args) {
