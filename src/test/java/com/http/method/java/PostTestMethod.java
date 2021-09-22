@@ -8,7 +8,7 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-public class PostTesting {
+public class PostTestMethod {
 	
 public void getTest() {
 	
@@ -19,13 +19,12 @@ public void getTest() {
 	
 	// 2nd ==> RequestSpecification and add data inside body
 	RequestSpecification rsf = RestAssured.given();
-	rsf.header("Content-type", "application/json");
 	rsf.body(obj); //passing test data inside the message body
 	
 	// 3rd ==> Pass the URL
 	Response response = rsf.post("http://localhost:3000/posts");
 		
-	//4th ==> Validate
+	//4th ==> API Basic Validation 
 		System.out.println("Status code ="+response.getStatusCode());//201
 		Assert.assertEquals(response.getStatusCode(), 201);
 		
@@ -39,13 +38,14 @@ public void getTest() {
 		Assert.assertTrue(response.getTime()<2000);
 		
 		//System.out.println(response.asString());//whole data
+		//Data Validation 
 		response.prettyPrint();
 		System.out.println("Is response null or not =" +(response.toString()!= null));
 		Assert.assertTrue(response.toString()!= null);
 	}
 	
 	public static void main(String[] args) {
-		new PostTesting().getTest();
+		new PostTestMethod().getTest();
 	}
 
 }
